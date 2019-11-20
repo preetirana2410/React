@@ -24,12 +24,12 @@ import {Card, CardImg, CardBody, CardText, CardTitle } from 'reactstrap';
     function RenderComments({comments}) {
         const items = comments.map((item) => {
             return (
-                <div>
+                <>{/* //ReactFragment */}
                     <div key={item.id} className="list-unstyled mb-4">
                         <li className="mb-1">{item.comment}</li>
                         <li className="ml-2">--{item.author} , {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(item.date)))}</li>
                     </div>                    
-                </div>
+                </>
             )
         });
 
@@ -58,7 +58,7 @@ import {Card, CardImg, CardBody, CardText, CardTitle } from 'reactstrap';
         }
         else {
             return (
-                <div> Your Loss</div>
+                <div> </div>
             )
         }
     }
